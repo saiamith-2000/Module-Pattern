@@ -1,4 +1,4 @@
-function insertionsort(arr) {
+export function insertionsort(arr) {
     for(let i = 1; i < arr.length; i++) {
         let currElement = arr[i];
         let j = i - 1;
@@ -10,7 +10,7 @@ function insertionsort(arr) {
     }
 }
 
-function bubblesort(arr) {
+export function bubblesort(arr) {
     let n = arr.length;
     // this function applied adjacent comparisons and immediate swaps with adjacent element
     for(let i = 0; i < n - 1; i++) {
@@ -42,7 +42,7 @@ function getMinIndex(arr, i) {
     return minIndex;
 }
 
-function selectionSort(arr) { // we assume array is integer array
+export function selectionSort(arr) { // we assume array is integer array
     for(let i = 0; i < arr.length; i++) {
         // [i, n-1] -> unsorted region
         let minIndex = getMinIndex(arr, i);
@@ -91,14 +91,6 @@ function f(arr, i, j) {
     return result;
 }
 
-function mergesort(arr) {
+export function mergesort(arr) {
     return f(arr, 0, arr.length - 1);
-}
-
-
-module.exports={
-    bubblesort,
-    insertionsort,
-    mergesort,
-    selectionSort,
 }
